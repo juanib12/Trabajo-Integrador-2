@@ -1,0 +1,45 @@
+### Ruta raiz.
+GET http://localhost:3000/
+
+### Obtener todos los contenidos.
+GET http://localhost:3000/contenido
+
+### Obtener un contenido por ID.
+GET http://localhost:3000/contenido/20
+
+### Filtrar contenidos por título, género o categoría.
+### Por título:
+GET http://localhost:3000/contenido/filtrar?titulo=contagio
+### Por género:
+GET http://localhost:3000/contenido/filtrar?genero=drama 
+### Por categoría:
+GET http://localhost:3000/contenido/filtrar?categoria=peli
+### Filtrar por múltiples criterios:
+GET http://localhost:3000/contenido/filtrar?titulo=Mandalorian&genero=Sci-Fi&categoria=Serie
+
+### Agregar un nuevo contenido
+POST http://localhost:3000/contenido
+content-type: application/json
+
+{
+    "titulo": "Spider-Man",
+    "resumen": "Luego de sufrir la picadura de una araña genéticamente modificada, un estudiante de secundaria tímido y torpe adquiere increíbles capacidades como arácnido. Pronto comprenderá que su misión es utilizarlas para luchar contra el mal y defender a sus vecinos.",
+    "temporadas": null,
+    "duracion": "2h 1m", 
+    "trailer": "https://www.youtube.com/watch?v=t06RUxPbp_c&pp=ygURdHJhaWxlciBzcGlkZXJtYW4%3D",
+    "idCategoria": 2,
+    "generos": [3, 4],
+    "actores": [1]
+}
+
+
+### Actualizar parcialmente un contenido por ID.
+PATCH  http://localhost:3000/contenido/1
+content-type: application/json
+
+{
+    "temporadas": 4
+}
+
+### Eliminar un contenido por ID.
+DELETE http://localhost:3000/contenido/23
