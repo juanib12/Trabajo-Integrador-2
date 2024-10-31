@@ -1,4 +1,4 @@
-# Proyecto Integrador: CRUD con Node.js y MySQL 🧐
+# Proyecto Integrador: CRUD con Node.js y MySQL
 
 En este proyecto se desarrolla una aplicación utilizando Node.js (Express JS) y MySQL (Sequelize) para gestionar el contenido disponible en la plataforma Trailerflix, que incluye películas y series. La API permite realizar operaciones CRUD (Crear, Leer, Actualizar y Borrar) sobre el contenido. Además, se ofrece la opción de filtrar el contenido por diferentes criterios, como género, título o categoría, mejorando así la experiencia de búsqueda y navegación.
 
