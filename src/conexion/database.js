@@ -5,7 +5,7 @@ const { MYSQLUSER, MYSQLPASSWORD, MYSQLHOST, MYSQL_DATABASE } = process.env;
 
 const sequelize = new Sequelize(MYSQL_DATABASE, MYSQLUSER, MYSQLPASSWORD, {
   host: MYSQLHOST,
-  dialect: "mysql",
+  dialect: "mysql", 
   pool: {
     max: 5,
     min: 0,
