@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
   });
 });
 
-// app.use("/contenido", contenido);
+app.use("/contenido", contenido);
 
 app.use((req, res) => {
   res.status(404).json({ error: "404, ESTAS PERDIDO!" });
